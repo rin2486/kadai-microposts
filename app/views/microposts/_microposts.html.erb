@@ -13,6 +13,8 @@
           <% if current_user == micropost.user %>
             <%= link_to "Delete", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
           <% end %>
+          <%= link_to "お気に入り",post_likes_path,method: :post %>
+          <%= link_to "お気に入り解除",post_likes_path,method: :delete %>
         </div>
       </div>
     </li>
